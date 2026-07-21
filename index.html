@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>COS-GPT — What It Is, and What It Is Not</title>
+<meta name="description" content="COS-GPT turns the public record of Colorado Springs & Manitou Springs government into plain-language answers with citations. What it is, how it works, and — just as clearly — what it is not.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- The archive. One canvas: buried documents, and a searchlight that follows you. -->
+<canvas id="archive" aria-hidden="true"></canvas>
+
+<header class="site-header">
+  <a class="wordmark" href="#hero">
+    <span class="wordmark-beam" aria-hidden="true"></span>
+    COS-GPT <span class="dim">/ on the record</span>
+  </a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="#problem">The Problem</a>
+    <a href="#how">How It Works</a>
+    <a href="#citations">Citations</a>
+    <a href="#not">What It's Not</a>
+    <a class="btn btn-primary" href="https://ask.springsaisolutions.com/" rel="noopener">Try it live</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============================== HERO ============================== -->
+  <section class="hero" id="hero" data-beam="cold">
+    <div class="hero-inner">
+      <p class="kicker reveal">COS-GPT · The civic record, answered</p>
+      <h1 class="reveal">Your city government,<br><em>in the light.</em></h1>
+      <p class="lede reveal">
+        Colorado Springs and Manitou Springs publish thousands of pages of public
+        records — and bury them in portals almost no one can navigate. COS-GPT reads
+        them all and answers plain-language questions, citing the exact document,
+        down to the timestamp in the meeting video.
+      </p>
+      <p class="touch-hint reveal" aria-hidden="true">
+        <span class="hint-desktop">Move your cursor — the light is the point.</span>
+        <span class="hint-mobile">Touch the dark — the light is the point.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================ PROBLEM ============================ -->
+  <section class="chapter" id="problem" data-beam="cold">
+    <div class="panel reveal">
+      <p class="kicker">The Problem</p>
+      <h2>Public doesn't mean <em>findable.</em></h2>
+      <p>
+        Every city council vote, every budget line, every ordinance is technically
+        public. In practice, the record is scattered across hundreds of PDFs in
+        portals that defy navigation — documents you can't find unless you already
+        know where to look. Even the largest general-purpose AIs can't surface them.
+      </p>
+      <p>
+        So the record sits there: <strong>open in law, dark in practice.</strong>
+        Transparency that requires a research librarian isn't transparency.
+      </p>
+    </div>
+    <div class="panel right reveal">
+      <p class="kicker">The Answer</p>
+      <h2>Ask like a neighbor.<br><em>Answered like a researcher.</em></h2>
+      <p>
+        COS-GPT spent a year doing the finding so you don't have to. It ingested the
+        public record of two cities — meeting minutes, agendas, budgets, ordinances,
+        city code, and word-for-word video transcripts — and made all of it
+        searchable in plain English.
+      </p>
+      <p>
+        Ask "What's the sales tax rate?" or "Can I keep chickens?" or "How much did
+        the city spend on police in 2022?" — and get an answer <em>with the receipts.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================== HOW IT WORKS ========================== -->
+  <section class="chapter" id="how" data-beam="found">
+    <div class="panel reveal">
+      <p class="kicker">How It Works</p>
+      <h2>One direction only: <em>record → you.</em></h2>
+      <p>
+        The pipeline runs one way. Public documents go in; cited answers come out.
+        Nothing about you goes back in.
+      </p>
+      <dl class="stats">
+        <div><dt>203k+</dt><dd>indexed records</dd></div>
+        <div><dt>2</dt><dd>cities covered</dd></div>
+        <div><dt>2013–25</dt><dd>budget data</dd></div>
+        <div><dt>16+</dt><dd>Manitou boards</dd></div>
+      </dl>
+    </div>
+    <ol class="pipeline">
+      <li class="reveal">
+        <h3>Collect the record</h3>
+        <p>Thousands of PDFs gathered from official city portals — minutes, agendas, budgets, resolutions, ordinances, city code — plus every public meeting video.</p>
+      </li>
+      <li class="reveal">
+        <h3>Read every page</h3>
+        <p>Documents are parsed, cleaned, and broken into searchable passages. Meeting videos are transcribed word-for-word, with speakers identified.</p>
+      </li>
+      <li class="reveal">
+        <h3>Index by meaning</h3>
+        <p>Seven specialized indexes — budget, civic, legislative, transcripts, both city codes, LART records — so a budget question searches budget data, not everything at once.</p>
+      </li>
+      <li class="reveal">
+        <h3>Answer with receipts</h3>
+        <p>Every answer is synthesized from the retrieved record and ships with its sources attached. No source, no claim.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- =========================== CITATIONS =========================== -->
+  <section class="chapter" id="citations" data-beam="found">
+    <div class="panel center reveal" style="text-align:center">
+      <p class="kicker">The Cornerstone</p>
+      <h2>Trust is a <em>citation.</em></h2>
+      <p>
+        COS-GPT can make mistakes — every AI can, and so can every human. So the
+        answer is never the product. <strong>The citation is.</strong> Each answer
+        carries up to five source cards: the document name, the date, the exact
+        passage, and for meeting videos, a link that opens the recording at the
+        precise second the words were said.
+      </p>
+    </div>
+    <div class="citation-demo reveal">
+      <div class="citation-card">
+        <span class="cc-label">Source 1 of 5</span>
+        <div class="cc-title">City Council Minutes · Nov 14, 2023</div>
+        <p>"…Councilmember moved to approve the 2024 appropriation ordinance as amended. Motion carried 7–2…"</p>
+        <div class="cc-meta">
+          ▶ Watch this moment · 1:14:32 &nbsp;·&nbsp; Verify at source ↗
+        </div>
+        <span class="cc-stamp">Official Record</span>
+      </div>
+      <p class="citation-caption" style="text-align:center">Every answer. Every time. Down to the timestamp.</p>
+    </div>
+    <blockquote class="pullquote reveal">
+      "COS-GPT is AI and can make mistakes — verify important details like budget
+      figures, permit steps, and meeting dates with the city before acting on them.
+      Answers draw <em>only</em> from official Colorado Springs &amp; Manitou Springs
+      government records."
+      <span class="pq-attr">— Shown on every page of COS-GPT, verbatim</span>
+    </blockquote>
+  </section>
+
+  <!-- ======================= WHAT IT IS / IS NOT ======================= -->
+  <section class="chapter" id="not" data-beam="guard">
+    <div class="panel center reveal" style="text-align:center">
+      <p class="kicker">Plainly Stated</p>
+      <h2>What COS-GPT is —<br>and what it <em>is not.</em></h2>
+      <p>
+        Reasonable people have reasonable questions about AI. Here are the answers,
+        without hedging.
+      </p>
+    </div>
+    <div class="truth-grid">
+      <div class="truth-card is reveal">
+        <span class="tc-tag">It is</span>
+        <h3>A reading lamp over public records</h3>
+        <p>Everything COS-GPT knows comes from documents the government has already made public: meeting minutes, agendas, budgets, ordinances, resolutions, city code, and videos of public meetings. <strong>That is the entire corpus.</strong></p>
+      </div>
+      <div class="truth-card not reveal">
+        <span class="tc-tag">It is not</span>
+        <h3>Trained on your private data</h3>
+        <p>There is no personal information in the corpus to train on. Your questions are used to answer you — not to feed the model, not to build a profile, not shared or sold. City council minutes talk about the city's business, <strong>not about you.</strong></p>
+      </div>
+      <div class="truth-card not reveal">
+        <span class="tc-tag">It is not</span>
+        <h3>Surveillance — in either direction</h3>
+        <p>COS-GPT watches <strong>government</strong>, not people. The site sets no tracking cookies and runs no third-party analytics. IP addresses are cryptographically hashed before logging, purely to enforce the free daily limit. It exists because tools that watch citizens — automated cameras, license-plate readers — deserve far more scrutiny than a search engine for public minutes.</p>
+      </div>
+      <div class="truth-card not reveal">
+        <span class="tc-tag">It is not</span>
+        <h3>An authority — and it says so</h3>
+        <p>COS-GPT is not the final word on anything. It is a finding aid with a permanent disclaimer, built so you can check its work in two clicks. The citation cards aren't decoration — <strong>they're the whole design.</strong></p>
+      </div>
+      <div class="truth-card is reveal">
+        <span class="tc-tag">It is</span>
+        <h3>Free to ask, no account needed</h3>
+        <p>Anyone can ask two questions a day with no sign-up, no email, no paywall. Accountability shouldn't require a credit card — or an identity.</p>
+      </div>
+      <div class="truth-card is reveal">
+        <span class="tc-tag">It is</span>
+        <h3>Independent of the government it reads</h3>
+        <p>COS-GPT is not a city product and isn't run by any agency. It's built and paid for by a local resident, Springs AI Solutions — which is exactly why it can be blunt about what the record says.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ BUILDER ============================ -->
+  <section class="chapter" id="builder" data-beam="clear">
+    <div class="panel reveal">
+      <p class="kicker">Who Built It, and Why</p>
+      <h2>A protector of the record —<br><em>not a facilitator of power.</em></h2>
+      <p>
+        COS-GPT wasn't built by a government or a contractor. It was built over a
+        year by one Colorado Springs resident who got tired of digging through
+        document portals for information the public already owns — hundreds of
+        PDFs downloaded one by one, parsed page by page, indexed so the next
+        person never has to repeat that work.
+      </p>
+      <p>
+        The premise is simple: <strong>government keeps secrets best in the dark,
+        and the dark here was never intentional — just inconvenient.</strong>
+        COS-GPT doesn't editorialize, endorse, or oppose. It holds up the document
+        and lets you read it.
+      </p>
+      <p>
+        <em>It takes liberties from no one. It takes excuses from everyone.</em>
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://ask.springsaisolutions.com/" rel="noopener">Ask COS-GPT a question</a>
+        <a class="btn btn-ghost" href="https://springsaisolutions.com/" rel="noopener">Springs AI Solutions</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-word">COS-GPT <span class="dim">/ on the record</span></p>
+  <p class="footer-note">
+    COS-GPT is in public beta and can make mistakes — verify important details
+    (budget figures, permit steps, meeting dates) with the city before acting on
+    them. Answers draw only from official Colorado Springs &amp; Manitou Springs
+    government records. COS-GPT is an independent project of Springs AI Solutions
+    and is not affiliated with, endorsed by, or a product of the City of Colorado
+    Springs, the City of Manitou Springs, or Colorado Springs Utilities. The
+    archive animation on this page is rendered live in your browser.
+  </p>
+</footer>
+
+<script src="js/searchlight.js"></script>
+</body>
+</html>
