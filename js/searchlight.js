@@ -109,6 +109,9 @@
   }
 
   /* --------------------------------------------------------- frame */
+  // On small screens the light stays subtle so text always wins contrast.
+  let dimFactor = 1;
+
   function frame(t) {
     // ease beam toward target
     beam.x += (beam.tx - beam.x) * 0.085;
@@ -135,7 +138,7 @@
       ctx.globalAlpha = d.base;
       ctx.drawImage(d.sprite, -d.w / 2, -d.h / 2, d.w, d.h);
       if (I > 0.01) {
-        ctx.globalAlpha = Math.min(I * 1.15 * flick, 0.96);
+        ctx.globalAlpha = Math.min(I * 1.15 * flick, 0.96) * dimFactor;
         ctx.drawImage(d.sprite, -d.w / 2, -d.h / 2, d.w, d.h);
       }
       ctx.restore();
@@ -160,17 +163,18 @@
     }
 
     // the light pool itself
+    const glow = beam.glow * dimFactor;
     const R = beam.r * beam.mood.reach;
     const grad = ctx.createRadialGradient(beam.x, beam.y, 0, beam.x, beam.y, R);
-    grad.addColorStop(0, `rgba(${tr | 0},${tg | 0},${tb | 0},${beam.glow})`);
-    grad.addColorStop(0.55, `rgba(${tr | 0},${tg | 0},${tb | 0},${beam.glow * 0.35})`);
+    grad.addColorStop(0, `rgba(${tr | 0},${tg | 0},${tb | 0},${glow})`);
+    grad.addColorStop(0.55, `rgba(${tr | 0},${tg | 0},${tb | 0},${glow * 0.35})`);
     grad.addColorStop(1, 'rgba(0,0,0,0)');
     ctx.fillStyle = grad;
     ctx.fillRect(beam.x - R, beam.y - R, R * 2, R * 2);
 
     // hot center — the bulb of the searchlight
     const core = ctx.createRadialGradient(beam.x, beam.y, 0, beam.x, beam.y, R * 0.12);
-    core.addColorStop(0, `rgba(255,255,255,${beam.glow * 0.9})`);
+    core.addColorStop(0, `rgba(255,255,255,${glow * 0.9})`);
     core.addColorStop(1, 'rgba(255,255,255,0)');
     ctx.fillStyle = core;
     ctx.fillRect(beam.x - R * 0.12, beam.y - R * 0.12, R * 0.24, R * 0.24);
@@ -228,7 +232,9 @@
   function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    beam.r = Math.max(200, Math.min(canvas.width, canvas.height) * 0.42);
+    const small = Math.min(canvas.width, canvas.height) < 720;
+    beam.r = Math.max(200, Math.min(canvas.width, canvas.height) * (small ? 0.34 : 0.42));
+    dimFactor = small ? 0.55 : 1;
     scatterDocs();
     seedMotes();
   }

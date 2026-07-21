@@ -452,7 +452,21 @@ h2 {
 @media (max-width: 720px) {
   .site-nav a:not(.btn) { display: none; }
   .chapter { padding-inline: 1rem; }
-  .panel { max-width: 100%; }
+
+  /* keep the light from fighting the words */
+  .hero-inner {
+    background: radial-gradient(75% 75% at 50% 50%, rgba(5, 8, 13, 0.78) 30%, rgba(5, 8, 13, 0) 100%);
+    padding: 2.5rem 1rem;
+  }
+  .panel {
+    max-width: 100%;
+    background: linear-gradient(160deg, rgba(10, 16, 24, 0.9), rgba(6, 10, 16, 0.82));
+  }
+  .pipeline li, .truth-card { background: rgba(8, 13, 20, 0.85); }
+  .pullquote {
+    background: radial-gradient(80% 80% at 50% 50%, rgba(5, 8, 13, 0.75) 25%, rgba(5, 8, 13, 0) 100%);
+    padding: 2rem 0.5rem;
+  }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .citation-demo { transform: none; }
 }
